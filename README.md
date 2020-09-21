@@ -1,6 +1,9 @@
-# IoLaunchesWeb
+# Launches Web
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
+
+## Description
+An PWA/TWA UI project for simple daily launches.
 
 ## Development server
 
