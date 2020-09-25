@@ -1,23 +1,26 @@
 <div class="container">
   <div class="p-fluid p-formgrid p-grid">
-    <div class="p-col-6">
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <mat-label>Favorite food</mat-label>
-          <input matInput placeholder="Ex. Pizza" value="Sushi">
+    <div class="p-col-12 account-circle">
+      <mat-icon class="img-account-circle">account_circle</mat-icon>
+    </div>
+    <div class="p-col-12">
+      <form class="form">
+        <mat-form-field class="w-100">
+          <mat-label>Username/e-mail</mat-label>
+          <input matInput placeholder="joao_silva or joao_ss@gmail.com">
         </mat-form-field>
         </form>
     </div>
-    <div class="p-col-6">
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <mat-label>Favorite food</mat-label>
-          <input matInput placeholder="Ex. Pizza" value="Sushi">
+    <div class="p-col-12">
+      <form class="form">
+        <mat-form-field class="w-100">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput>
         </mat-form-field>
         </form>
     </div>
     <div class="p-field p-col-12">
-      <button mat-raised-button color="primary" style="width: 100%;">Primary</button>
+      <button mat-raised-button color="primary" class="w-100">Authenticate</button>
     </div>
   </div>
 </div>
