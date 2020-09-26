@@ -1,0 +1,97 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #2962ff;
+}
+
+/* For devices like an Android e iOS, 'Portrait' examples: 
+    * MotoG4;
+    * iPhone 6/7/8;
+*/
+@media only screen and (min-device-width: 0px) and (max-device-width: 375px) and (orientation: portrait) {
+    .shuttle {
+        margin-top: 190px;
+        margin-left: 140px;
+    }
+    
+    .shuttle-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logoname {
+        margin-top: 15px;
+        margin-left: 110px;
+    }
+
+    .label-logoname {
+        color: #ffffff;
+        font-size: 29px;
+    }
+
+    .information {
+        margin-top: 200px;
+        margin-left: 20px;
+    }
+
+    .label-information {
+        color: #ffffff;
+        font-size: 19px;
+    }
+
+    .version {
+        margin-top: 200px;
+        margin-left: 150px;
+    }
+
+    .label-version {
+        color: #ffffff;
+        font-size: 14px;
+    }
+}
+
+/* For devices like an Android e iOS, 'Landscape' examples: 
+    * MotoG4;
+    * iPhone 6/7/8;
+*/
+@media only screen and (min-device-width: 0px) and (max-device-width: 667px) and (orientation: landscape) {
+    .shuttle {
+        margin-top: 50px;
+        margin-left: 265px;
+    }
+    
+    .shuttle-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .logoname {
+        margin-left: 230px;
+        margin-top: 10px;
+    }
+
+    .label-logoname {
+        color: #ffffff;
+        font-size: 29px;
+    }
+
+    .information {
+        margin-top: 80px;
+        margin-left: 110px;
+    }
+
+    .label-information {
+        color: #ffffff;
+        font-size: 19px;
+    }
+
+    .version {
+        margin-left: 270px;
+    }
+
+    .label-version {
+        color: #ffffff;
+        font-size: 14px;
+    }
+}
+
