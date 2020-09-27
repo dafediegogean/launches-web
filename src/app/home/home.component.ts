@@ -32,14 +32,13 @@ export class HomeComponent implements OnInit {
   }
 
   redirect() {
-    setTimeout(function () {
-      this.router.navigate(['/login']);
-    }.bind(this), 3000);
+    this.router.navigate(['/basic-information']);
   }
 
   showProgressSpinner = () => {
     this.displayProgressSpinner = true;
     setTimeout(() => {
+      this.redirect();
       this.displayProgressSpinner = false;
     }, 3000);
   };

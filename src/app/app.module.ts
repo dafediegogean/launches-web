@@ -4,20 +4,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BasicInformationModule } from './basic-information/basic-information.module';
 import { HomeModule } from './home/home.module';
-import { BasicInformationFormComponent } from './basic-information-form/basic-information-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BasicInformationFormComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    BasicInformationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
