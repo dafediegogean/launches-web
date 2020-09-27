@@ -5,10 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
+import { BasicInformationFormComponent } from './basic-information-form/basic-information-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BasicInformationFormComponent
   ],
   imports: [
     BrowserModule,

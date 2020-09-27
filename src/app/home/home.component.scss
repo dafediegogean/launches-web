@@ -4,17 +4,21 @@
     background-color: #2962ff;
 }
 
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
+    stroke: #ffffff;
+}
+
 /* For devices like an Android e iOS, 'Portrait' examples: 
     * MotoG4;
     * iPhone 6/7/8;
 */
 @media only screen and (min-device-width: 0px) and (max-device-width: 375px) and (orientation: portrait) {
-    .shuttle {
+    .rocket {
         margin-top: 190px;
-        margin-left: 140px;
+        margin-left: 130px;
     }
     
-    .shuttle-img {
+    .rocket-img {
         width: 80px;
         height: 80px;
     }
@@ -28,15 +32,11 @@
         color: #ffffff;
         font-size: 29px;
     }
-
-    .information {
-        margin-top: 200px;
-        margin-left: 20px;
-    }
-
-    .label-information {
-        color: #ffffff;
-        font-size: 19px;
+    
+    .load {
+        position: fixed;
+        margin-top: 140px;
+        margin-left: 150px;
     }
 
     .version {
@@ -55,14 +55,14 @@
     * iPhone 6/7/8;
 */
 @media only screen and (min-device-width: 0px) and (max-device-width: 667px) and (orientation: landscape) {
-    .shuttle {
-        margin-top: 50px;
-        margin-left: 265px;
+    .rocket {
+        margin-top: 70px;
+        margin-left: 250px;
     }
     
-    .shuttle-img {
-        width: 70px;
-        height: 70px;
+    .rocket-img {
+        width: 80px;
+        height: 80px;
     }
 
     .logoname {
@@ -75,16 +75,12 @@
         font-size: 29px;
     }
 
-    .information {
-        margin-top: 80px;
-        margin-left: 110px;
+    .load {
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 265px;
     }
-
-    .label-information {
-        color: #ffffff;
-        font-size: 19px;
-    }
-
+    
     .version {
         margin-left: 270px;
     }

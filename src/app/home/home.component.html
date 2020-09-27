@@ -1,9 +1,13 @@
 <div class="container">
-    <div class="shuttle">
-        <img src="../../assets/imgs/shuttle.png" class="shuttle-img" alt="A ninja">
+    <div class="rocket">
+        <img src="../../assets/imgs/rocket.png" class="rocket-img" alt="A rocket">
     </div>
     <div class="logoname">
         <label class="label-logoname">Launches</label>
+    </div>
+    <div class="load" *ngIf="displayProgressSpinner">
+        <mat-progress-spinner [color]="color" [diameter]="diameter" 
+            [mode]="mode" [strokeWidth]="strokeWidth" [value]="value"></mat-progress-spinner>
     </div>
     <br/>
     <div class="version">
