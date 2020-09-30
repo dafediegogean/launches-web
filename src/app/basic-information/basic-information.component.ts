@@ -1,20 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
+import { MatStepper } from '@angular/material/stepper';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 interface Month {
   value: number;
   viewValue: string;
 }
 
-
 @Component({
   selector: 'app-basic-information',
   templateUrl: './basic-information.component.html',
-  styleUrls: ['./basic-information.component.scss']
+  styleUrls: ['./basic-information.component.scss'],
+  providers: [
+    { provide: MAT_STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false, showError: true } }
+  ]
 })
 export class BasicInformationComponent implements OnInit {
 
+  @ViewChild('stepper', {static: false})
+  stepper: MatStepper;
+
+  formGroup: FormGroup;
+
+  index: number;
   months: Month[];
+  isEditable = false;
 
   constructor() { }
 
@@ -33,6 +45,11 @@ export class BasicInformationComponent implements OnInit {
       { value: 11, viewValue: 'november' },
       { value: 12, viewValue: 'december' }
     ];
+    this.index = 0;
+  }
+
+  next() {
+    this.index = 1;
   }
 
 }

@@ -1,4 +1,16 @@
-:host ::ng-deep mat-form-field {   
+:host ::ng-deep .mat-form-field {   
+    width: 100%;
+}
+
+:host ::ng-deep .mat-horizontal-stepper-header-container {
+    width: 100%;
+}
+
+:host ::ng-deep .mat-horizontal-stepper-header-container {
+    pointer-events: none !important;
+}
+
+button {
     width: 100%;
 }
 
