@@ -64,12 +64,14 @@ export class BasicInformationComponent implements OnInit {
   }
 
   save() {
-    this.newFormGroup = this.firstFormGroup;
     this.newFormGroup = this.formBuilder.group({
+      firstName: this.firstFormGroup.get('firstName').value,
+      secondName: this.firstFormGroup.get('secondName').value,
       month: this.firstFormGroup.get('month.value').value,
-      grossValue: this.secondFormGroup.get('grossValue').value,
+      day: this.firstFormGroup.get('day').value,
+      year: this.firstFormGroup.get('year').value,
+      grossValue: this.secondFormGroup.get('grossValue').value
     });
-    this.newFormGroup = this.firstFormGroup.value,
     console.log(this.newFormGroup.value);
   }
 

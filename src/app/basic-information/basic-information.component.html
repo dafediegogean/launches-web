@@ -68,7 +68,8 @@
                         </mat-form-field>
                     </div>
                     <div class="p-col-12">
-                        <button mat-raised-button type="submit" color="primary">All right!</button>
+                        <button mat-raised-button type="submit" color="primary"
+                            [disabled]="secondFormGroup.invalid">All right!</button>
                     </div>
                 </div>
             </form>
