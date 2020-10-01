@@ -16,13 +16,12 @@ import { MaskUtil } from './../shared/mask/mask.util';
   declarations: [BasicInformationComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
     MatStepperModule,
     MatButtonModule,
-    FormsModule,
-    ReactiveFormsModule,
-
     TextMaskModule,
 
     BasicInformationRoutingModule
