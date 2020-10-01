@@ -31,4 +31,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Content views
 
-![](src/assets/preview/contents_views.png)
+![](src/assets/preview/content_views.png)
