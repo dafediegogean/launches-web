@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-
-import { MatStepper } from '@angular/material/stepper';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatStepper } from '@angular/material/stepper';
 import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+
+import { MaskUtil } from './../shared/mask/mask.util';
 
 interface Month {
   value: number;
@@ -24,11 +25,17 @@ export class BasicInformationComponent implements OnInit {
 
   formGroup: FormGroup;
 
+  usdMask: any;
+
   index: number;
   months: Month[];
   isEditable = false;
 
-  constructor() { }
+  constructor(
+    private mask: MaskUtil
+  ) {
+    this.usdMask = this.mask.usdMask;
+  }
 
   ngOnInit() {
     this.months = [

@@ -52,6 +52,22 @@
             </mat-step>
             <mat-step state="view_array">
                 <ng-template matStepLabel>Some details</ng-template>
+                <div class="p-fluid p-formgrid p-grid">
+                    <div class="p-col-12 mt-50">
+                        <label class="default-color fz-24 fw-b">Just a few more details</label>
+                    </div>
+                    <div class="p-col-12 mt-50">
+                        <mat-form-field>
+                            <mat-label>Gross income in the month</mat-label>
+                            <span matPrefix>$ &nbsp;</span>
+                            <input currencyMask  matInput placeholder="0.00"
+                                [textMask]="{ mask: usdMask }" minlength="3" maxlength="7">
+                        </mat-form-field>
+                    </div>
+                    <div class="p-col-12">
+                        <button mat-raised-button color="primary" (click)="next()">All right!</button>
+                    </div>
+                </div>
             </mat-step>
         </form>
     </mat-horizontal-stepper>
