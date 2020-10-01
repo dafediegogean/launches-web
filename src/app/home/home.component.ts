@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   displayProgressSpinner: boolean;
 
   constructor(
-    private router: Router,
+    private router: Router
   ) { }
 
   ngOnInit() {

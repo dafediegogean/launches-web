@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
 import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { Router } from '@angular/router';
 
 import { MaskUtil } from './../shared/mask/mask.util';
 
@@ -35,6 +36,7 @@ export class BasicInformationComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
     private mask: MaskUtil
   ) {
     this.usdMask = this.mask.usdMask;
@@ -73,6 +75,7 @@ export class BasicInformationComponent implements OnInit {
       grossValue: this.secondFormGroup.get('grossValue').value
     });
     console.log(this.newFormGroup.value);
+    this.redirect();
   }
 
   configForm() {
@@ -88,6 +91,10 @@ export class BasicInformationComponent implements OnInit {
     this.secondFormGroup = this.formBuilder.group({
       grossValue: [null, Validators.required]
     })
+  }
+
+  redirect() {
+    this.router.navigate(['/launches-form']);
   }
 
 }
