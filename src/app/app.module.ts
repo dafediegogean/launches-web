@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BasicInformationModule } from './basic-information/basic-information.module';
 import { HomeModule } from './home/home.module';
+import { LaunchesFormModule } from './launches-form/launches-form.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeModule } from './home/home.module';
     
     AppRoutingModule,
     HomeModule,
-    BasicInformationModule
+    BasicInformationModule,
+    LaunchesFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
