@@ -23,7 +23,9 @@ export class BasicInformationComponent implements OnInit {
   @ViewChild('stepper', {static: false})
   stepper: MatStepper;
 
-  formGroup: FormGroup;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  newFormGroup: FormGroup;
 
   usdMask: any;
 
@@ -32,6 +34,7 @@ export class BasicInformationComponent implements OnInit {
   isEditable = false;
 
   constructor(
+    private formBuilder: FormBuilder,
     private mask: MaskUtil
   ) {
     this.usdMask = this.mask.usdMask;
@@ -53,10 +56,36 @@ export class BasicInformationComponent implements OnInit {
       { value: 12, viewValue: 'december' }
     ];
     this.index = 0;
+    this.configForm();
   }
 
   next() {
     this.index = 1;
+  }
+
+  save() {
+    this.newFormGroup = this.firstFormGroup;
+    this.newFormGroup = this.formBuilder.group({
+      month: this.firstFormGroup.get('month.value').value,
+      grossValue: this.secondFormGroup.get('grossValue').value,
+    });
+    this.newFormGroup = this.firstFormGroup.value,
+    console.log(this.newFormGroup.value);
+  }
+
+  configForm() {
+    this.firstFormGroup = this.formBuilder.group({
+      firstName: [null, Validators.required],
+      secondName: [null, Validators.required],
+      month: this.formBuilder.group({
+        value: [null, Validators.required]
+      }),
+      day: [null, Validators.required],
+      year: [null, Validators.required]
+    });
+    this.secondFormGroup = this.formBuilder.group({
+      grossValue: [null, Validators.required]
+    })
   }
 
 }
