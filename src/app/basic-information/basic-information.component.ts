@@ -2,9 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
 import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 import { MaskUtil } from './../shared/mask/mask.util';
+import { BasicInformartionService } from './basic-informartion.service';
 
 interface Month {
   value: number;
@@ -37,7 +39,9 @@ export class BasicInformationComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private mask: MaskUtil
+    private snackBar: MatSnackBar,
+    private mask: MaskUtil,
+    private basicInformationService: BasicInformartionService
   ) {
     this.usdMask = this.mask.usdMask;
   }
@@ -63,9 +67,12 @@ export class BasicInformationComponent implements OnInit {
 
   next() {
     this.index = 1;
+    this.snackBar.open(`Congratulations! Let's go to the next step`, null, {
+      duration: 5000,
+    });
   }
 
-  save() {
+  create() {
     this.newFormGroup = this.formBuilder.group({
       firstName: this.firstFormGroup.get('firstName').value,
       secondName: this.firstFormGroup.get('secondName').value,
@@ -74,8 +81,11 @@ export class BasicInformationComponent implements OnInit {
       year: this.firstFormGroup.get('year').value,
       grossValue: this.secondFormGroup.get('grossValue').value
     });
-    console.log(this.newFormGroup.value);
+    this.basicInformationService.save(this.newFormGroup.value);
     this.redirect();
+    this.snackBar.open(`Now here, this is where you will see the entire daily launch`, null, {
+      duration: 5000,
+    });
   }
 
   configForm() {

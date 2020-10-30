@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BasicInformartionService } from './basic-information/basic-informartion.service';
 import { BasicInformationModule } from './basic-information/basic-information.module';
 import { HomeModule } from './home/home.module';
 import { LaunchesFormModule } from './launches-form/launches-form.module';
@@ -21,7 +22,7 @@ import { LaunchesFormModule } from './launches-form/launches-form.module';
     BasicInformationModule,
     LaunchesFormModule
   ],
-  providers: [],
+  providers: [BasicInformartionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
