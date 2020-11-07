@@ -18,7 +18,6 @@ export class BasicInformartionService {
   constructor(private http: HttpClient) { }
 
   save(basicInformation: BasicInformation) {
-    debugger;
     this.http.post<BasicInformation>(
       'http://localhost:8080/v1/basic-information/create', basicInformation)
         .toPromise();
